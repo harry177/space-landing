@@ -5,4 +5,31 @@
   width: 100%;
   max-width: 1088px;
   margin-bottom: 60px;
+
+  h2 {
+    text-align: start;
+  }
+
+  span {
+    text-align: start;
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 60%;
+  }
+}
+
+.journey-button {
+  width: 150px;
+  background-color: transparent;
+  color: #EBFF00;
+  border: none;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 0;
+  text-align: start;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 60%;
+  }
 }

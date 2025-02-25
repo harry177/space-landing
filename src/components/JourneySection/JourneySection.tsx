@@ -16,6 +16,7 @@ export const JourneySection = () => {
         fully enjoy your adventure in space. We offer various options for space
         excursions.
       </span>
+      <button className="journey-button">Read more</button>
     </section>
   );
 };
