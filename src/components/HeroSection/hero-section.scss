@@ -11,7 +11,7 @@
       rgb(0 0 0 / 0%),
       rgb(15 20 32 / 79%)
     ),
-    url("hero-space.jpg");
+    url("/hero-space.jpg");
   background-size: cover;
   background-position: bottom;
   box-sizing: border-box;
@@ -233,7 +233,7 @@
 
 .earth-container {
   position: absolute;
-  background-image: url("space-ship.svg"), url("earth.png");
+  background-image: url("/space-ship.svg"), url("/earth.png");
   background-position: 40% 110%, 38% 20%;
   background-repeat: no-repeat;
   z-index: 50;
