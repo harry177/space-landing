@@ -88,10 +88,10 @@
 .nav-cart {
   width: 24px;
   height: 20px;
-  background-image: url("cart-white.svg");
+  background-image: url("/cart-white.svg");
 
   &:hover {
-    background-image: url("cart-hovered.svg");
+    background-image: url("/cart-hovered.svg");
   }
 }
 
@@ -116,7 +116,7 @@
     width: 24px;
     height: 3px;
     margin: 3px 0;
-    background-image: url("burger-line.svg");
+    background-image: url("/burger-line.svg");
     background-repeat: no-repeat;
     background-size: contain;
     transition: all 0.3s ease;
