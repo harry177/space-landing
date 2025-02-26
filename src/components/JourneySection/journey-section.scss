@@ -24,10 +24,13 @@
     }
   }
 
-  span {
+  &__text-container {
     text-align: start;
     line-height: 24px;
     opacity: 60%;
+    max-height: 72px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 
     @include responsive("small") {
       font-size: 14px;
@@ -41,12 +44,25 @@
       font-size: 20px;
     }
   }
+
+  &__read-more-toggle {
+    display: none;
+
+    &:checked ~ .journey__text-container {
+      max-height: 1000px;
+      opacity: 1;
+    }
+
+    &:checked ~ .journey-button::before {
+      content: "Read less";
+      color: #ebff00;
+    }
+  }
 }
 
 .journey-button {
   width: 150px;
   background-color: transparent;
-  color: #ebff00;
   border: none;
   padding: 0;
   text-align: start;
@@ -56,18 +72,25 @@
     opacity: 60%;
   }
 
-  @include responsive("small") {
-    font-size: 14px;
-    line-height: 16.8px;
-  }
+  &::before {
+    content: "Read more";
+    color: #ebff00;
+    font-family: "Lato", serif;
+    font-weight: 800;
 
-  @include responsive("medium") {
-    font-size: 16px;
-    line-height: 19.2px;
-  }
+    @include responsive("small") {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
 
-  @include responsive("large") {
-    font-size: 20px;
-    line-height: 24px;
+    @include responsive("medium") {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+
+    @include responsive("large") {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }

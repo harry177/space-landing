@@ -9,7 +9,7 @@
   padding-top: 35px;
   box-sizing: border-box;
 
-  @include responsive("medium") {
+  @include responsive("small") {
     padding-left: 26px;
     padding-top: 90px;
   }
