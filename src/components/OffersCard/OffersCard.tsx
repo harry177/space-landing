@@ -15,7 +15,7 @@ export const OffersCard = ({ picture, title, motto }: OffersCardProps) => {
       <div className="offers-card__content">
         <h3>{title}</h3>
         <h4>{motto}</h4>
-        <Button>Learn more</Button>
+        <Button className="button-empty">Learn more</Button>
       </div>
     </article>
   );

@@ -11,3 +11,45 @@
   z-index: 70;
   box-sizing: border-box;
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  max-width: 1088px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 50px;
+
+  li {
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(to right, #ebff00, #ff70d9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.nav-cart {
+  width: 24px;
+  height: 20px;
+  background-image: url("cart-white.svg");
+
+  &:hover {
+    background-image: url("cart-hovered.svg");
+  }
+}

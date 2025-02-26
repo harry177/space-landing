@@ -11,6 +11,7 @@
   flex-grow: 1;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background-image: linear-gradient(to bottom, #0D1E48, #304571);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  max-width: 1088px;
 }
