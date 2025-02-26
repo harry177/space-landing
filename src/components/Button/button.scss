@@ -1,10 +1,11 @@
+@use "/src/_variables" as *;
+
 .button {
-  width: 191px;
-  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid #ebff00;
   border-radius: 100px;
-  padding: 14px 35px;
-  font-size: 22px;
   cursor: pointer;
 
   &:hover {
@@ -15,9 +16,33 @@
 .button-full {
   color: #000000;
   background-color: #ebff00;
+
+  @include responsive("small") {
+    width: 161px;
+    height: 33px;
+    font-size: 16px;
+  }
+
+  @include responsive("medium") {
+    width: 191px;
+    height: 54px;
+    font-size: 22px;
+  }
 }
 
 .button-empty {
   color: #ebff00;
   background-color: transparent;
+
+  @include responsive("small") {
+    width: 161px;
+    height: 33px;
+    font-size: 16px;
+  }
+
+  @include responsive("large") {
+    width: 191px;
+    height: 54px;
+    font-size: 22px;
+  }
 }

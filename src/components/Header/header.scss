@@ -1,3 +1,5 @@
+@use "/src/_variables" as *;
+
 .header {
   position: absolute;
   display: flex;
@@ -10,6 +12,14 @@
   margin-bottom: 20px;
   z-index: 70;
   box-sizing: border-box;
+
+  @include responsive("small") {
+    height: 48px;
+  }
+
+  @include responsive("medium") {
+    height: 80px;
+  }
 }
 
 .header-container {
@@ -24,7 +34,39 @@
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 6px;
+  width: fit-content;
+
+  @include responsive("small") {
+    gap: 4px;
+  }
+
+  @include responsive("large") {
+    gap: 6px;
+  }
+
+  img:nth-child(1) {
+    @include responsive("small") {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include responsive("large") {
+      width: 35.11px;
+      height: 35.11px;
+    }
+  }
+
+  img:nth-child(2) {
+    @include responsive("small") {
+      width: 43.1px;
+      height: 17.37px;
+    }
+
+    @include responsive("large") {
+      width: 63px;
+      height: 25.47px;
+    }
+  }
 }
 
 .nav-list {

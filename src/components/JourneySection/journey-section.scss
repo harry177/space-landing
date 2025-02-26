@@ -1,3 +1,5 @@
+@use "/src/_variables" as *;
+
 .journey {
   display: flex;
   flex-direction: column;
@@ -8,28 +10,64 @@
 
   h2 {
     text-align: start;
+
+    @include responsive("small") {
+      font-size: 18px;
+    }
+
+    @include responsive("medium") {
+      font-size: 24px;
+    }
+
+    @include responsive("large") {
+      font-size: 32px;
+    }
   }
 
   span {
     text-align: start;
-    font-size: 20px;
     line-height: 24px;
     opacity: 60%;
+
+    @include responsive("small") {
+      font-size: 14px;
+    }
+
+    @include responsive("medium") {
+      font-size: 16px;
+    }
+
+    @include responsive("large") {
+      font-size: 20px;
+    }
   }
 }
 
 .journey-button {
   width: 150px;
   background-color: transparent;
-  color: #EBFF00;
+  color: #ebff00;
   border: none;
-  font-size: 20px;
-  line-height: 24px;
   padding: 0;
   text-align: start;
   cursor: pointer;
 
   &:hover {
     opacity: 60%;
+  }
+
+  @include responsive("small") {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+
+  @include responsive("medium") {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  @include responsive("large") {
+    font-size: 20px;
+    line-height: 24px;
   }
 }

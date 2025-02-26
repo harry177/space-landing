@@ -1,20 +1,55 @@
+@use "/src/_variables" as *;
+
 .offers {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   width: 100%;
   max-width: 1088px;
-  margin-top: 613px;
   margin-bottom: 62px;
+
+  @include responsive("small") {
+    gap: 30px;
+    margin-top: 540px;
+  }
+
+  @include responsive("large") {
+    gap: 40px;
+    margin-top: 613px;
+  }
 
   h2 {
     text-align: start;
+
+    @include responsive("small") {
+      font-size: 18px;
+    }
+
+    @include responsive("medium") {
+      font-size: 24px;
+    }
+
+    @include responsive("large") {
+      font-size: 32px;
+    }
   }
 }
 
 .offers-grid {
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+
+  @include responsive("small") {
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  @include responsive("medium") {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @include responsive("large") {
+    gap: 40px;
+    grid-template-rows: repeat(3, auto);
+  }
 }
